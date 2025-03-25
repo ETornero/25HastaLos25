@@ -25,6 +25,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const productId = localStorage.getItem("buyProduct");
 
+    preloadImages([
+        './resources/img/khiels.png',
+        './resources/img/palette.png',
+        './resources/img/snack.png',
+        './resources/img/points.png',
+        './resources/img/mask.png',
+        './resources/img/ticket.png',
+        './resources/img/cupcake.png',
+        './resources/img/gift.png'
+    ]);
+    
     if (productId) {
         const productElement = document.getElementById(productId);
     
@@ -166,6 +177,13 @@ document.addEventListener("DOMContentLoaded", function() {
             <img src='./resources/img/gift.png'>
         </div>`
     ];
+
+    function preloadImages(urls) {
+        urls.forEach(url => {
+            const img = new Image();
+            img.src = url;
+        });
+    }
 
     function shuffleArray(array) {
         for (let i = array.length - 1; i > 0; i--) {
