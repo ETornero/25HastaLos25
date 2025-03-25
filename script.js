@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
             </p>
         </div>`,
         `<div>
-            <img src='/resources/img/ticket.png'>
+            <img src='./resources/img/ticket.png'>
             <p>Vale por un masaje!</p>
         </div>`,
         `<div>
@@ -72,15 +72,15 @@ document.addEventListener("DOMContentLoaded", function() {
             <p>Una frase motivadora</p>
         </div>`,
         `<div>
-            <img src='/resources/img/snack.png'>
+            <img src='./resources/img/snack.png'>
             <p>Un snack sorpresa!</p>
         </div>`,
         `<div>
-            <img src='/resources/img/points.png'>
+            <img src='./resources/img/points.png'>
             <p data-points="100">100 Puntos</p>
         </div>`,
         `<div>
-            <img src='/resources/img/mask.png'>
+            <img src='./resources/img/mask.png'>
             <p>Sesion de mascarillas faciales!</p>
         </div>`,
         `<div>
@@ -88,27 +88,27 @@ document.addEventListener("DOMContentLoaded", function() {
             <p>Una frase motivadora</p>
         </div>`,
         `<div>
-            <img src='/resources/img/ticket.png'>
+            <img src='./resources/img/ticket.png'>
             <p>Vale por una cena romántica casera!</p>
         </div>`,
         `<div>
-            <img src='/resources/img/points.png'>
+            <img src='./resources/img/points.png'>
             <p data-points="100">100 Puntos</p>
         </div>`,
         `<div>
-            <img src='/resources/img/snack.png'>
+            <img src='./resources/img/snack.png'>
             <p>Un snack sorpresa!</p>
         </div>`,
         `<div>
-            <img src='/resources/img/ticket.png'>
+            <img src='./resources/img/ticket.png'>
             <p>Vale por lo que quieras! Pídelo y lo haré realidad.</p>
         </div>`,
         `<div>
-            <img src='/resources/img/points.png'>
+            <img src='./resources/img/points.png'>
             <p data-points="100">100 Puntos</p>
         </div>`,
         `<div>
-            <img src='/resources/img/cupcake.png'>
+            <img src='./resources/img/cupcake.png'>
             <p>Día de reposteria!</p>
         </div>`,
         `<div>
@@ -116,19 +116,19 @@ document.addEventListener("DOMContentLoaded", function() {
             <p>Una frase motivadora</p>
         </div>`,
         `<div>
-            <img src='/resources/img/points.png'>
+            <img src='./resources/img/points.png'>
             <p data-points="100">100 Puntos</p>
         </div>`,
         `<div>
-            <img src='/resources/img/snack.png'>
+            <img src='./resources/img/snack.png'>
             <p>Un snack sorpresa!</p>
         </div>`,
         `<div>
-            <img src='/resources/img/ticket.png'>
+            <img src='./resources/img/ticket.png'>
             <p>Vale por un picnic!</p>
         </div>`,
         `<div>
-            <img src='/resources/img/points.png'>
+            <img src='./resources/img/points.png'>
             <p data-points="100">100 Puntos</p>
         </div>`,
         `<div>
@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <p>Un lugar al que ir</p>
         </div>`,
         `<div>
-            <img src='/resources/img/points.png'>
+            <img src='./resources/img/points.png'>
             <p data-points="100">100 Puntos</p>
         </div>`,
         `<div>
@@ -144,15 +144,15 @@ document.addEventListener("DOMContentLoaded", function() {
             <p>Una frase motivadora</p>
         </div>`,
         `<div>
-            <img src='/resources/img/points.png'>
+            <img src='./resources/img/points.png'>
             <p data-points="100">100 Puntos</p>
         </div>`,
         `<div>
-            <img src='/resources/img/snack.png'>
+            <img src='./resources/img/snack.png'>
             <p>Un snack sorpresa!</p>
         </div>`,
         `<div>
-            <img src='/resources/img/points.png'>
+            <img src='./resources/img/points.png'>
             <p data-points="100">100 Puntos</p>
         </div>`,
         `<div>
@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>`,
         `<div>
             <p>¡Felicidades! Disfruta tu día, te quiero. 🤍</p>
-            <img src='/resources/img/gift.png'>
+            <img src='./resources/img/gift.png'>
         </div>`
     ];
 
