@@ -16,7 +16,7 @@
 body {
     width: 100vw;
     height: 100vh;
-    background: url('/resources/img/backgroundPatter.png') repeat center center;
+    background: url('./resources/img/backgroundPatter.png') repeat center center;
     display: flex;
     justify-content: center;
     align-items: center;
