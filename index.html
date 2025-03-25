@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡25 hasta los 25!</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+</head>
+<body>
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+    <div id="content" class="hidden">
+        <button id="shop-button">
+            <img src="resources/img/points.png">
+            <p id="points">0</p>
+        </button>
+        <h1>¡25 hasta los 25!</h1>
+        <div id="calendar"></div>
+    </div>
+    <div id="overlay" style="display:none;">
+        <div id="gift-text"></div>
+        <div id="gift-content"></div> 
+        <button id="close-overlay">Cerrar</button>
+    </div>
+    <div id="shop">
+        <div class="shop-content">
+            <button id="shop-button-count">
+                <img src="resources/img/points.png">
+                <p id="points-count">0</p>
+            </button>
+            <p>Esta es la tienda de productos puedes comprar productos con tus puntos!</p>
+            <div class="products">
+                <div id="1">
+                    <img src="/resources/img/khiels.png">
+                    <div>
+                        <img src="resources/img/points.png">
+                        <p>800</p>
+                    </div>
+                </div>
+                <div id="2">
+                    <img src="/resources/img/palette.png">
+                    <div>
+                        <img src="resources/img/points.png">
+                        <p>800</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Añadir más elementos si lo deseas -->
+            <button id="close-shop-button">Cerrar tienda</button>
+        </div>
+        <div id="shop-alert" class="hidden">
+            <div id="alert-content">
+                <p id="alert-message">No tienes suficientes puntos para comprar este producto.</p>
+                <button id="close-alert">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
