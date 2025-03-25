@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    font-family: "Lobster", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    z-index: 0;
+    user-select: none;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background: url('/resources/img/backgroundPatter.png') repeat center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 2s ease-out;
+}
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #fff;
+    border-top: 5px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+#content {
+    position: relative;
+    pointer-events: none;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+.day {
+    width: 125px;
+    height: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: pink;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.day:hover {
+    transform: scale(1.1);
+}
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: bold;
+    display: none;
+    flex-direction: column;
+}
+#overlay button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: pink;
+    transition: transform 0.2s;
+}
+#overlay button:hover {
+    transform: scale(1.1);
+}
+#gift-content {
+    font-size: 26px;
+    font-weight: normal;
+    margin: 20px;
+}
+#gift-content > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+    gap: 50px;
+    text-align: center;
+    line-height: 150%;
+}
+#gift-content div img {
+    max-width: 300px;
+    border: 5px;
+}
+#gift-content p:first-of-type {
+    color: pink;
+    font-size: 45px;
+}
+p[data-points] {
+    color: #FFCD00 !important; 
+    font-weight: bold;
+}
+.locked {
+    background-color: #A6EBE3;
+}
+#reset-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #222;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 1000;
+}
+
+#reset-button:hover {
+    background: #444;
+}
+
+#shop-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    background: transparent;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 1000;
+    transition: 0.2s ease;
+    font-size: 25px;
+    gap: 10px;
+}
+
+#shop-button:hover {
+    transform: scale(1.1);
+}
+
+#shop-button img {
+    max-width: 40px;
+    margin: 5px;
+}
+
+.today {
+    animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: scale(1);
+        background-color: pink;
+    }
+    50% {
+        transform: scale(1.05);
+        background-color: rgb(255, 164, 180)
+    }
+}
+
+#shop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+    display: none; /* Inicialmente oculto */
+    z-index: 1000; /* Asegura que se muestre por encima de todo */
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out; /* Transición suave */
+    font-size: 50px;
+
+}
+
+.shop-content {
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+    width: 100%;
+    text-align: center;
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop-content .products {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    background-color: rgba(255, 255, 255, 0.075);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.shop-content .products > div {
+    transition: transform 0.2s;
+}
+
+.shop-content .products > div:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.shop-content .products > div > img {
+
+    width: 250px;
+    filter: brightness(0);
+}
+
+.shop-content .products div p {
+
+    font-size: 30px;
+    color: #FFCD00 !important;
+    font-weight: bold;
+}
+
+.shop-content .products div div {
+
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop-content .products div div img{
+
+    max-width: 40px;
+    margin: 5px;
+}
+
+#close-shop-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: pink;
+    transition: transform 0.2s;
+}
+
+#close-shop-button:hover {
+    transform: scale(1.1);
+}
+
+#shop-button-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    background: transparent;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 1000;
+    transition: 0.2s ease;
+    font-size: 25px;
+    gap: 10px;
+}
+
+#shop-button-count img {
+    max-width: 40px;
+    margin: 5px;
+}
+
+#shop-alert {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); 
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#alert-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    gap: 20px;
+}
+
+#alert-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: pink;
+    transition: transform 0.2s;
+}
+
+#alert-content button:hover {
+    transform: scale(1.1);
+}
